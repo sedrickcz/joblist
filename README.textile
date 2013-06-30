@@ -4,19 +4,33 @@ Create ordered sequence of jobs from string input
 
 h2. Run
 
-ruby init.rb [string_param]
+bc.. ruby init.rb [string_param]
 
-"string_param" is string sequence of jobs where character before "=>" is name of a job and character after "=>" is a job dependecy. If it's empty it has no dependency. 
+p. "string_param" is string sequence of jobs where character before "=>" is name of a job and character after "=>" is a job dependecy. If it's empty it has no dependency. 
 Jobs are separated by "|"
 
 h3. For example:
 
 h4. Input
+
 bc.. ruby init.rb "a=>|b=>|c=>"
+
 h4. Output
+
 bc.. a -> b -> c
 
 h4. Input
+
 bc.. ruby init.rb "a=>|b=>c|c=>"
+
 h4. Output
+
 bc.. a -> c -> b
+
+h3. Tests
+
+p. Using RSpec as a testing framework. Tests are in tests directory
+
+bc.. rspec job_list_spec.rb
+
+bc.. rspec job_spec.rb
