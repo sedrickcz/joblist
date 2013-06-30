@@ -12,11 +12,11 @@ Jobs are separated by "|"
 h3. For example:
 
 h4. Input
-ruby init.rb "a=>|b=>|c=>"
+bc.. ruby init.rb "a=>|b=>|c=>"
 h4. Output
-a -> b -> c
+bc.. a -> b -> c
 
 h4. Input
-ruby init.rb "a=>|b=>c|c=>"
+bc.. ruby init.rb "a=>|b=>c|c=>"
 h4. Output
-a -> c -> b
+bc.. a -> c -> b
